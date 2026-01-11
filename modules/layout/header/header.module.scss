@@ -1,0 +1,36 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 40px;
+  gap: 16px;
+  background-color: rgb(10 25 47);
+  border: #ffffff;
+
+  @media screen and (max-width: 768px) {
+    padding: 16px 20px;
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 360px) {
+    padding: 12px;
+    justify-content: space-between;
+  }
+
+  .info {
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    padding: 8px;
+    cursor: pointer;
+
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 360px) {
+      font-size: 10px;
+    }
+  }
+}

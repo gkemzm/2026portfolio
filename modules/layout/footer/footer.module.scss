@@ -1,0 +1,19 @@
+.wrapper {
+  background-color: #222222;
+  padding: 4px 160px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+
+  @media screen and (max-width: 768px) {
+    padding: 8px 40px;
+  }
+
+  @media screen and (max-width: 360px) {
+    padding: 4px 24px;
+  }
+
+  .infoText {
+    font-size: 12px;
+  }
+}
