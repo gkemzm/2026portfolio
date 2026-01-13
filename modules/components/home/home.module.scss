@@ -1,6 +1,26 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  min-height: 86vh;
+  height: 100vh;
   justify-content: center;
+
+  .center {
+    margin-bottom: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    .small {
+      font-size: 24px;
+      color: #bebebe;
+    }
+
+    .medium {
+      color: #bebebe;
+      font-size: 32px;
+    }
+
+    .large {
+      font-size: 40px;
+    }
+  }
 }

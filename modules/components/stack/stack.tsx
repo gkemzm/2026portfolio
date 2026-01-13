@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import classes from "./stack.module.scss";
 import SkillsSection from "./stackBox/stackBox";
+import RevealSection from "../revealSection/revealSection";
 
 const StackComponent = () => {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -35,9 +36,11 @@ const StackComponent = () => {
         <div className={classes.rule} />
       </header>
 
-      <div className={classes.contentArea}>
-        <SkillsSection />
-      </div>
+      <RevealSection>
+        <div className={classes.contentArea} data-reveal="left">
+          <SkillsSection />
+        </div>
+      </RevealSection>
     </div>
   );
 };

@@ -1,9 +1,11 @@
 .wrapper {
   background-color: #222222;
-  padding: 4px 160px;
+  padding: 2px 160px;
   width: 100%;
   position: fixed;
   bottom: 0;
+  display: flex;
+  justify-content: center;
 
   @media screen and (max-width: 768px) {
     padding: 8px 40px;

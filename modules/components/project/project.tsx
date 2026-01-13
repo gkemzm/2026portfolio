@@ -2,6 +2,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import classes from "./project.module.scss";
+import ProjectCard from "./projectBox/projectBox";
+import { PROJECTS } from "./projectBox/projectData";
+import RevealSection from "../revealSection/revealSection";
 
 const ProjectComponent = () => {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -33,10 +36,15 @@ const ProjectComponent = () => {
         <h2 className={classes.title}>Project</h2>
         <div className={classes.rule} />
       </header>
-      <div className={classes.contentArea}>
-        <div className={classes.content}></div>
-        <div className={classes.content}></div>
-      </div>
+      <RevealSection>
+        <div className={classes.list}>
+          {PROJECTS.map((p) => (
+            <div key={p.id} data-reveal="left">
+              <ProjectCard project={p} />
+            </div>
+          ))}
+        </div>
+      </RevealSection>
     </div>
   );
 };
