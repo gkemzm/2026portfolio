@@ -1,0 +1,262 @@
+/* Skills section (minimal, Yoo Seung-yoon-ish vibe) */
+.wrap {
+  /* tweak these to match your site theme */
+  --bg: #0f1115;
+  --surface: #11151c;
+  --text: #ededed;
+  --muted: #a1a1aa;
+  --line: rgba(255, 255, 255, 0.08);
+  --accent: #2ef2d0; /* minty teal like screenshot */
+  --accent2: #10b981; /* alternative green */
+
+  //   max-width: 1080px;
+  //   margin: 0 auto;
+  padding: 0px;
+
+  color: var(--text);
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.kicker {
+  color: var(--accent);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.title {
+  font-size: 32px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+  transform: translateY(6px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 28px;
+  border-left: 1px solid var(--line);
+  padding-left: 18px;
+}
+
+/* left nav */
+.nav {
+  position: relative;
+}
+
+.navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem + .navItem {
+  margin-top: 14px;
+}
+
+.navBtn {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 0;
+  padding: 10px 12px;
+  color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  border-left: 2px solid transparent;
+  transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
+  border-radius: 8px;
+}
+
+.navBtn:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.navBtnActive {
+  color: var(--accent);
+  border-left-color: var(--accent);
+  background: rgba(46, 242, 208, 0.06);
+}
+
+/* content */
+.content {
+  min-height: 360px;
+}
+
+.contentHeader {
+  margin-bottom: 14px;
+}
+
+.contentTitle {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.accent {
+  color: var(--accent);
+}
+
+.items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 86px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+/* icon "double ring" */
+.iconWrap {
+  width: 74px;
+  height: 74px;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.ringOuter,
+.ringInner {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  border: 2px solid rgba(46, 242, 208, 0.85);
+  box-shadow: 0 0 0 1px rgba(46, 242, 208, 0.2);
+}
+
+.ringInner {
+  inset: 8px;
+  border-color: rgba(46, 242, 208, 0.55);
+}
+
+.icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.icon img {
+  width: 28px;
+  height: 28px;
+  display: block;
+  opacity: 0.95;
+}
+
+.metaTop {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.itemTitle {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.desc {
+  margin: 8px 0 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 14px;
+}
+
+.descMuted {
+  margin: 0;
+  min-height: 0; /* placeholder */
+}
+
+/* badges */
+.badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  user-select: none;
+}
+
+.badgeMain {
+  border-color: rgba(46, 242, 208, 0.4);
+  color: var(--accent);
+  background: rgba(46, 242, 208, 0.06);
+}
+
+.badgeUsed {
+  border-color: rgba(255, 255, 255, 0.14);
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.badgeTried {
+  border-color: rgba(16, 185, 129, 0.35);
+  color: rgba(16, 185, 129, 0.95);
+  background: rgba(16, 185, 129, 0.06);
+}
+
+/* responsive */
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .navList {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .navItem + .navItem {
+    margin-top: 0;
+  }
+
+  .navBtn {
+    width: auto;
+    border-left: 0;
+    border-bottom: 2px solid transparent;
+  }
+
+  .navBtnActive {
+    border-bottom-color: var(--accent);
+    border-left-color: transparent;
+  }
+}
+
+@media (max-width: 520px) {
+  .title {
+    font-size: 26px;
+  }
+  .item {
+    grid-template-columns: 72px 1fr;
+  }
+  .iconWrap {
+    width: 64px;
+    height: 64px;
+  }
+}

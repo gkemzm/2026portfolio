@@ -1,1 +1,1 @@
-export const headerItem = ["home", "profile", "skill", "project", "notion"];
+export const headerItem = ["home", "profile", "stack", "project", "notion"];
