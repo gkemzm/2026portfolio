@@ -1,0 +1,148 @@
+.wrap {
+  margin-top: 16px;
+}
+
+/* strip */
+.strip {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  flex-wrap: wrap;
+  padding: 8px 2px 2px 2px;
+  scroll-snap-type: x mandatory;
+}
+
+.thumb {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 14px;
+  padding: 0;
+  cursor: pointer;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.thumb:hover {
+  transform: translateY(-1px);
+  border-color: rgba(46, 242, 208, 0.25);
+}
+
+.thumbInner {
+  display: block;
+  width: 120px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.thumbImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95;
+  transform: scale(1.02);
+}
+
+/* ===== Modal Portal (always center) ===== */
+.portal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(6px);
+  border: 0;
+  padding: 0;
+}
+
+/* ✅ 어디에서 열어도 항상 화면 중앙 */
+.modalCenter {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+}
+.overlay {
+  opacity: 1; /* GSAP이 제어 */
+}
+
+.modalInner {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+.modalInner {
+  width: min(980px, 92vw);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(17, 21, 28, 0.92);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.modalTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.caption {
+  color: rgba(237, 237, 237, 0.9);
+  font-size: 13px;
+}
+
+.close {
+  width: 36px;
+  height: 32px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: rgba(237, 237, 237, 0.9);
+  cursor: pointer;
+}
+
+.close:hover {
+  border-color: rgba(46, 242, 208, 0.25);
+}
+
+.viewer {
+  padding: 10px;
+}
+
+.viewerImg {
+  width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.navBtn {
+  width: 44px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(46, 242, 208, 0.22);
+  background: rgba(46, 242, 208, 0.06);
+  color: rgba(46, 242, 208, 0.95);
+  cursor: pointer;
+}
+
+.navHint {
+  color: rgba(161, 161, 170, 0.9);
+  font-size: 12px;
+}

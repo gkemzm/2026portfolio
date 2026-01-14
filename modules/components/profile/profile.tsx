@@ -2,7 +2,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import classes from "./profile.module.scss";
-import ProfileBox from "./profileBox/profileBox";
+// import ProfileBox from "./profileBox/profileBox";
 import RevealSection from "../revealSection/revealSection";
 
 const ProfileComponent = () => {
@@ -29,51 +29,66 @@ const ProfileComponent = () => {
   }, []);
 
   return (
-    <div className={classes.wrapper} ref={rootRef}>
+    <section className={classes.wrap} aria-label="About Me">
       <header className={classes.header}>
         <div className={classes.kicker}>01.</div>
         <h2 className={classes.title}>About Me</h2>
         <div className={classes.rule} />
       </header>
       <RevealSection>
-        <div className={classes.contentArea}>
-          <div className={classes.content}>
-            <div data-reveal="left">
-              <ProfileBox
-                title="저는 이런 사람입니다."
-                content={[
-                  "- 시간약속을 중요히 여깁니다.",
-                  "- 불가능한 상황에서도 끊임없이 고민하고 행동하여 성취하고자 합니다.",
-                  "- 맡은바에 대해서 책임감을 가지고 임합니다.",
-                ]}
-              />
-            </div>
-            <div data-reveal="left">
-              <ProfileBox
-                title="저는 이런 개발자입니다."
-                content={[
-                  "- 웹 표준을 중요히 여기며, 동료와의 협업을 중시합니다.",
-                  "- 맡은바 책임을 다하며, 더 나은 퍼포먼스를 위해 노력합니다.",
-                  "- 새로운 것에 흥미를 가지고 계속해서 도전해나갑니다.",
-                ]}
-              />
-            </div>{" "}
-            <div data-reveal="left">
-              <ProfileBox
-                title="저는 이런 일을 했습니다."
-                content={[
-                  "- FE개발 전반을 진행하였으며, 대부분 FE단일으로 프로젝트를 진행하였습니다.",
-                  "- BE, 기획자, 디자이너, 마케터, 클라이언트 등 개발자 비개발자 구분없이 다양한 사람들과 협업을 했습니다.",
-                  "- 백오피스, 이커머스, 통계, 설문등 다양한 프로젝트 경험이 있습니다.",
-                  "- FE개발외적으로 데이터분석, AI, 화면기획을 진행했습니다.",
-                ]}
-              />
-            </div>
+        <div className={classes.grid}>
+          <div className={classes.cards}>
+            <article className={classes.card} data-reveal="left">
+              <div className={classes.cardTop}>
+                <h3 className={classes.cardTitle}>저는 이런 사람입니다.</h3>
+                <span className={classes.badge}>Mindset</span>
+              </div>
+              <ul className={classes.list}>
+                <li>시간 약속을 중요하게 여깁니다.</li>
+                <li>불가능해 보이는 상황에서도 끝까지 고민하고 실행합니다.</li>
+                <li>말한 바에 책임감을 가지고 일합니다.</li>
+              </ul>
+            </article>
+
+            <article className={classes.card} data-reveal="left">
+              <div className={classes.cardTop}>
+                <h3 className={classes.cardTitle}>저는 이런 개발자입니다.</h3>
+                <span className={classes.badge}>Work Style</span>
+              </div>
+              <ul className={classes.list}>
+                <li>웹 표준과 협업을 중시하고, 코드를 읽기 쉽게 유지합니다.</li>
+                <li>성능/품질을 위해 리팩터링을 꾸준히 수행합니다.</li>
+                <li>새로운 기술을 필요에 맞게 빠르게 흡수합니다.</li>
+              </ul>
+            </article>
+
+            <article className={classes.card} data-reveal="left">
+              <div className={classes.cardTop}>
+                <h3 className={classes.cardTitle}>저는 이런 일을 했습니다.</h3>
+                <span className={classes.badge}>Experience</span>
+              </div>
+              <ul className={classes.list}>
+                <li>
+                  FE 개발 전반을 담당하며, 다수 프로젝트를 FE 중심으로
+                  진행했습니다.
+                </li>
+                <li>
+                  BE/기획/디자인/마케팅/클라이언트 등 다양한 직군과
+                  협업했습니다.
+                </li>
+                <li>
+                  백오피스·이커머스·통계·설문 등 도메인 프로젝트 경험이
+                  있습니다.
+                </li>
+                <li>
+                  데이터 분석/AI/화면 기획 등 인접 업무도 함께 수행했습니다.
+                </li>
+              </ul>
+            </article>
           </div>
-          <div className={classes.content}></div>
         </div>
       </RevealSection>
-    </div>
+    </section>
   );
 };
 

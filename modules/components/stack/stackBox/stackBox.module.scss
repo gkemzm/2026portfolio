@@ -78,6 +78,10 @@
   border-left: 2px solid transparent;
   transition: color 160ms ease, border-color 160ms ease, background 160ms ease;
   border-radius: 8px;
+
+  @media screen and (max-width: 425px) {
+    font-size: 12px;
+  }
 }
 
 .navBtn:hover {
@@ -124,6 +128,10 @@
   grid-template-columns: 86px 1fr;
   gap: 18px;
   align-items: start;
+
+  @media screen and (max-width: 425px) {
+    gap: 4px;
+  }
 }
 
 /* icon "double ring" */
@@ -133,6 +141,11 @@
   position: relative;
   display: grid;
   place-items: center;
+
+  @media screen and (max-width: 425px) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .ringOuter,
@@ -157,6 +170,11 @@
   display: grid;
   place-items: center;
   overflow: hidden;
+
+  @media screen and (max-width: 425px) {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .icon img {
@@ -183,6 +201,9 @@
   color: var(--muted);
   line-height: 1.55;
   font-size: 14px;
+  @media screen and (max-width: 425px) {
+    font-size: 12px;
+  }
 }
 
 .descMuted {

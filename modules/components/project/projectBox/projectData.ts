@@ -5,19 +5,28 @@ export type ProjectLink = {
   href: string;
 };
 
+export type ProjectImage = {
+  src: string; // "/projects/zium/1.png" 같은 로컬 경로 추천 (public 아래)
+  alt: string;
+  w?: number; // next/image 최적화용 (가능하면 넣기)
+  h?: number;
+};
+
 export type Project = {
   id: string;
   title: string;
-  subtitle?: string; // ex) Admin Dashboard / 예약·결제
-  summary: string; // 1~2줄 요약
-  highlights?: string[]; // 핵심 구현/성과 2~4개
-  stack: string[]; // ex) ["Next.js", "TypeScript", "SCSS", "Jotai"]
-  tags?: ProjectTag[]; // ex) ["Performance", "Refactor"]
-  period?: string; // ex) 2024.10 - 2025.06
-  role?: string; // ex) FE 70%
-  links?: ProjectLink[];
-  // 썸네일 이미지 쓰고 싶으면:
-  // thumbnail?: { src: string; alt: string };
+  subtitle?: string;
+  summary: string;
+  highlights?: string[];
+  stack: string[];
+  tags?: string[];
+  period?: string;
+  role?: string;
+  links?: {
+    label: "Demo" | "GitHub" | "Docs" | "Detail" | "Site";
+    href: string;
+  }[];
+  images?: ProjectImage[]; // ✅ 추가
 };
 
 export const PROJECTS: Project[] = [
@@ -39,6 +48,14 @@ export const PROJECTS: Project[] = [
     period: "2024.10 - 2025.09",
     role: "Frontend",
     links: [],
+    images: [
+      { src: "/zium/main.png", alt: "메인", w: 1440, h: 900 },
+      { src: "/zium/customer.png", alt: "고객", w: 1440, h: 900 },
+      { src: "/zium/consult.png", alt: "상담", w: 1440, h: 900 },
+      { src: "/zium/product.png", alt: "상품", w: 1440, h: 900 },
+      { src: "/zium/reservation.png", alt: "예약", w: 1440, h: 900 },
+      { src: "/zium/inquiry.png", alt: "조회", w: 1440, h: 900 },
+    ],
   },
   {
     id: "zium-user",

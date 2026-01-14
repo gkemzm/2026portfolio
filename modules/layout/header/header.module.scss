@@ -6,13 +6,14 @@
   gap: 16px;
   background-color: rgb(10 25 47);
   border: #ffffff;
+  min-width: 360px;
 
   @media screen and (max-width: 768px) {
     padding: 16px 20px;
     justify-content: space-between;
   }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 425px) {
     padding: 12px;
     justify-content: space-between;
   }
@@ -24,12 +25,21 @@
     font-weight: 400;
     padding: 8px;
     cursor: pointer;
+    white-space: nowrap;
+
+    span {
+      color: #bebebe;
+
+      @media screen and (max-width: 550px) {
+        display: none;
+      }
+    }
 
     @media screen and (max-width: 768px) {
       font-size: 12px;
     }
 
-    @media screen and (max-width: 360px) {
+    @media screen and (max-width: 425px) {
       font-size: 10px;
     }
   }

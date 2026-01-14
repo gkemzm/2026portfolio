@@ -7,7 +7,8 @@ const Header = () => {
         const label = item.toUpperCase();
         return (
           <div className={classes.info} key={item}>
-            {idx + 1}.&nbsp;{label}
+            <span>0{idx}.&nbsp;</span>
+            {label}
           </div>
         );
       })}

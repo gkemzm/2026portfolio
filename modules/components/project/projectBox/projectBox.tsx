@@ -1,5 +1,6 @@
 import styles from "./projectBox.module.scss";
 import type { Project } from "./projectData";
+import ProjectGallery from "./projectGallery";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
@@ -75,6 +76,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </div>
         ) : null}
       </div>
+      {project.images && <ProjectGallery images={project.images} />}
     </article>
   );
 };
