@@ -54,10 +54,6 @@ const HomeComponent = () => {
               <div className={styles.metaLabel}>E-mail</div>
               <div className={styles.metaValue}>gkemzm@gmail.com</div>
             </div>
-            <div className={styles.metaItem}>
-              <div className={styles.metaLabel}>E-mail</div>
-              <div className={styles.metaValue}>gkemzm@gmail.com</div>
-            </div>
           </div>
 
           <div className={styles.rule} />
