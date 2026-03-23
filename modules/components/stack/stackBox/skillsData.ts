@@ -69,6 +69,14 @@ export const SKILLS: Record<SkillCategory, SkillItem[]> = {
         "scss tree구조의 가시성과 네이밍에 신경쓰며 협력에 초점을 두며 사용합니다.",
     },
     {
+      key: "tailwind",
+      title: "tailwind",
+      level: "Used",
+      desc: "사용빈도가 scss/css-in-js 보다는 적지만 충분히 활용가능합니다.",
+      desc2:
+        "shadcn 라이브러리와 함께 사용하여 높은 생산성을 추구할 수 있습니다.",
+    },
+    {
       key: "styledcomponents",
       title: "styled-components",
       level: "Main",
@@ -95,6 +103,13 @@ export const SKILLS: Record<SkillCategory, SkillItem[]> = {
       title: "Recoil",
       level: "Used",
       desc: "jotai의 원형인 만큼 Atom단위기반 상태관리 라이브러리로서 활용이 가능합니다.",
+    },
+    {
+      key: "justand",
+      title: "Justand",
+      level: "Used",
+      desc: "사용빈도는 jotai보다 적지만 jotai와 다른 강점을 가지고 있어 사용경험이 있습니다.",
+      desc2: "실무 활용이 가능한 수준입니다.",
     },
   ],
   BackEnd: [
