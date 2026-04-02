@@ -1,5 +1,6 @@
 export type SkillCategory =
   | "Language"
+  | "Main"
   | "FrontEnd"
   | "BackEnd"
   | "Database"
@@ -16,6 +17,7 @@ export type SkillItem = {
 
 export const SKILL_CATEGORIES: Array<{ id: SkillCategory; label: string }> = [
   { id: "Language", label: "Language" },
+  { id: "Main", label: "Main" },
   { id: "FrontEnd", label: "FrontEnd" },
   { id: "BackEnd", label: "BackEnd" },
   { id: "Database", label: "Database" },
@@ -39,21 +41,6 @@ export const SKILLS: Record<SkillCategory, SkillItem[]> = {
     },
   ],
   FrontEnd: [
-    {
-      key: "react",
-      title: "React",
-      level: "Main",
-      desc: "버츄얼 돔과 react의 동작방식을 이해하고 있습니다. ",
-      desc2: "대부분의 hook을 활용한 실전 활용이 가능합니다.",
-    },
-    {
-      key: "next",
-      title: "Next.js (App Router)",
-      level: "Main",
-      desc: "page/app router 활용이 가능하며, next.js의 장단점을 이해합니다.",
-      desc2:
-        "ssr, csr, isr, ssg 등 랜더링을 이해하며, api router를 사용한 API 작성및 middleware를 통한 토큰관리가 가능합니다. ",
-    },
     {
       key: "css",
       title: "CSS",
@@ -110,6 +97,23 @@ export const SKILLS: Record<SkillCategory, SkillItem[]> = {
       level: "Used",
       desc: "사용빈도는 jotai보다 적지만 jotai와 다른 강점을 가지고 있어 사용경험이 있습니다.",
       desc2: "실무 활용이 가능한 수준입니다.",
+    },
+  ],
+  Main: [
+    {
+      key: "react",
+      title: "React",
+      level: "Main",
+      desc: "버츄얼 돔과 react의 동작방식을 이해하고 있습니다. ",
+      desc2: "대부분의 hook을 활용한 실전 활용이 가능합니다.",
+    },
+    {
+      key: "next",
+      title: "Next.js (App Router)",
+      level: "Main",
+      desc: "page/app router 활용이 가능하며, next.js의 장단점을 이해합니다.",
+      desc2:
+        "ssr, csr, isr, ssg 등 랜더링을 이해하며, api router를 사용한 API 작성및 middleware를 통한 토큰관리가 가능합니다. ",
     },
   ],
   BackEnd: [

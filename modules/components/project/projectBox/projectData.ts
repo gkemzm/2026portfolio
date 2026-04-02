@@ -37,7 +37,7 @@ export const PROJECTS: Project[] = [
     summary:
       "지움이 사용하는 관리자 페이지를 Next.js App Router 기반으로 개발하고, 공통 컴포넌트화와 성능 개선을 진행했습니다.",
     highlights: [
-      "프론트엔드 전반 개발, 화면 세부 기획, QC/QA 진행",
+      "Next.js 기반 프론트엔드 전반 설계및 개발, 화면 세부 기획, QC/QA 진행",
       "대용량 테이블/캘린더 렌더링 최적화(체감 성능 개선)",
       "middleWare 를통한 자동로그인/토큰 관리 설계",
       "api/roter를 활용한 외부 API 연결및 일부 API 제작",
@@ -63,8 +63,8 @@ export const PROJECTS: Project[] = [
     subtitle: "솔루션 메인페이지 / BTC/BTB 상담신청 페이지",
     summary: "Zium의 유저페이지를 Next.js App Router 기반으로 개발하였습니다.",
     highlights: [
-      "프론트엔드 전반 개발, 화면 세부 기획, QC/QA 진행",
-      "css/animation 개선을 통한 UI/UX 향상",
+      "Next.js 기반 프론트엔드 전반 설계및 개발, 화면 세부 기획, QC/QA 진행",
+      "방문 통계를 기반으로 css/animation 개선을 통한 UI/UX 향상",
       "Naver, Google 플랫폼 SEO 최적화를 통한 사용자 증가",
     ],
     stack: ["Next.js", "TypeScript", "SCSS", "Jotai", "MySQL", "Jenkins"],
@@ -80,7 +80,8 @@ export const PROJECTS: Project[] = [
     summary:
       "전기차 충전기 중계 솔루션인 Entizen의 페이지를 Next.js App Router 기반으로 개발하였습니다.",
     highlights: [
-      "프론트엔드 전반 개발",
+      "Next.js 기반 프론트엔드 전반 설계및 개발,",
+      "Page router => App Router 마이그레이션 작업을 통한 유지보수성 향상",
       "ab테스트, gtm, ms clarity, GA4등 유입테스트 진행",
       "테스트를 기반으로 css/페이지구조 개선을 통한 유저 증가",
       "Naver, Google 플랫폼 SEO 최적화를 통한 사용자 증가",

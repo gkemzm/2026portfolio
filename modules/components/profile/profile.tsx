@@ -56,32 +56,37 @@ const ProfileComponent = () => {
                 <span className={classes.badge}>Work Style</span>
               </div>
               <ul className={classes.list}>
-                <li>웹 표준과 협업을 중시하고, 코드를 읽기 쉽게 유지합니다.</li>
-                <li>성능/품질을 위해 리팩터링을 꾸준히 수행합니다.</li>
-                <li>새로운 기술을 필요에 맞게 빠르게 흡수합니다.</li>
+                <li>
+                  구조와 재사용성을 고려해 개발하는 프론트엔드 개발자입니다.
+                </li>
+                <li>
+                  Next.js 기반 프로젝트에서 공용 컴포넌트와 구조를 설계하여 개발
+                  속도와 유지보수성을 동시에 개선해왔습니다.
+                </li>
+                <li>
+                  또한 AI와 자동화를 활용하여 반복 작업을 줄이고, 팀 전체
+                  생산성을 높이는 방향으로 개발합니다.
+                </li>
+                <li>
+                  다양한 직군과 협업하며 원만한 결과를 도출해 낼 수 있습니다.
+                </li>
               </ul>
             </article>
 
             <article className={classes.card} data-reveal="left">
               <div className={classes.cardTop}>
-                <h3 className={classes.cardTitle}>저는 이런 일을 했습니다.</h3>
+                <h3 className={classes.cardTitle}>
+                  프론트엔드 개발을 중심으로 다양한 서비스 구축을 경험했습니다.
+                </h3>
                 <span className={classes.badge}>Experience</span>
               </div>
               <ul className={classes.list}>
+                <li>백오피스 시스템 개발을 통해 운영 비용 60% 절감</li>
+                <li>사용자 경험 개선을 통해 사용자 수 1.5배 증가</li>
+                <li>데이터 분석 및 A/B 테스트를 통해 사용자 3배 증가.</li>
                 <li>
-                  FE 개발 전반을 담당하며, 다수 프로젝트를 FE 중심으로
-                  진행했습니다.
-                </li>
-                <li>
-                  BE/기획/디자인/마케팅/클라이언트 등 다양한 직군과
-                  협업했습니다.
-                </li>
-                <li>
-                  백오피스·이커머스·통계·설문 등 도메인 프로젝트 경험이
-                  있습니다.
-                </li>
-                <li>
-                  데이터 분석/AI/화면 기획 등 인접 업무도 함께 수행했습니다.
+                  또한 기획, 데이터 분석, AI 활용 등 인접 영역까지 확장하며
+                  서비스 단위로 문제를 해결하는 경험을 쌓았습니다.
                 </li>
               </ul>
             </article>

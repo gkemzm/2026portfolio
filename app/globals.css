@@ -34,6 +34,7 @@ body {
   vertical-align: baseline;
   box-sizing: border-box;  
   font-family: "PRETENDARD";
+  user-select: none;
 }
 
 body {
